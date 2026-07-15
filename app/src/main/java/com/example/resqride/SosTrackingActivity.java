@@ -43,7 +43,7 @@ public class SosTrackingActivity extends AppCompatActivity
     private TextView txtStatus, txtDistance;
     private boolean paymentOpened = false;
 
-    private static final String API_KEY = "AIzaSyDelRrYRYfDAsdIhNxWXh7CtrolWt-O-j4";
+    private static final String API_KEY = "YOUR_API_KEY";
 
     // ===================================================
     // ON CREATE
