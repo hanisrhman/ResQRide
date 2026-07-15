@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="end"
+    android:padding="6dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- MESSAGE BUBBLE -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/bg_chat_me"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="280dp">
+
+        <!-- TEXT MESSAGE -->
+        <TextView
+            android:id="@+id/txtMessage"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- IMAGE MESSAGE -->
+        <ImageView
+            android:id="@+id/imgMessage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="4dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:background="@drawable/bg_image_round"/>
+
+        <!-- FILE BUTTON -->
+        <Button
+            android:id="@+id/btnFile"
+            android:text="Open File"
+            android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2563EB"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- SEEN STATUS -->
+        <TextView
+            android:id="@+id/txtSeen"
+            android:text="Delivered"
+            android:textSize="11sp"
+            android:textColor="#E5E7EB"
+            android:layout_gravity="end"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

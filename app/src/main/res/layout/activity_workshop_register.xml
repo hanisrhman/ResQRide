@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_blue">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- LOGO -->
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/logo2"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:text="Workshop Registration"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- CARD -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@drawable/bg_white_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edtName"
+                android:hint="Workshop Name"
+                android:background="@drawable/bg_input"
+                android:padding="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/bg_input"
+                android:padding="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:background="@drawable/bg_input"
+                android:padding="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edtPhone"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:background="@drawable/bg_input"
+                android:padding="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edtAddress"
+                android:hint="Workshop Address"
+                android:background="@drawable/bg_input"
+                android:padding="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- PIN LOCATION -->
+            <Button
+                android:id="@+id/btnPickLocation"
+                android:text="📍 Pin Workshop Location"
+                android:textAllCaps="false"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+
+            <TextView
+                android:id="@+id/txtLocationStatus"
+                android:text="No location selected"
+                android:textColor="#E53935"
+                android:textSize="12sp"
+                android:layout_marginTop="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:text="Submit for Approval"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#F2C94C"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:id="@+id/txtBack"
+                android:text="Back to Login"
+                android:textColor="#6A5AE0"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

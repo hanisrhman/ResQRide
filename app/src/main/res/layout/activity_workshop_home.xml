@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- GOOGLE MAP -->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- STATUS BADGE -->
+    <TextView
+        android:id="@+id/txtStatus"
+        android:text="● Available"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="6dp"
+        android:layout_margin="14dp"
+        android:background="@drawable/bg_status_available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"/>
+
+
+    <!-- BOTTOM SHEET -->
+    <LinearLayout
+        android:id="@+id/bottomSheet"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:background="@drawable/bg_bottom_sheet"
+        android:paddingBottom="70dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_peekHeight="200dp"
+        app:behavior_fitToContents="true">
+
+
+
+        <!-- HANDLE -->
+        <View
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_handle"/>
+
+        <!-- TITLE -->
+        <TextView
+            android:text="Incoming SOS Requests"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:textColor="#111827"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- LIST -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerSOS"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="8dp"/>
+
+    </LinearLayout>
+
+    <!-- BOTTOM NAV -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
+        android:background="#E7F5F8"
+        android:elevation="16dp"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:menu="@menu/workshop_bottom_nav"
+        app:labelVisibilityMode="labeled"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

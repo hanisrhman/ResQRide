@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#F8FAFC"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:src="@drawable/ic_back"
+                android:padding="6dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"/>
+
+            <TextView
+                android:text="Add Maintenance"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#0F172A"
+                android:layout_marginStart="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- CARD -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_card_rounded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- SERVICE TYPE -->
+            <TextView
+                android:text="Service Type"
+                android:textStyle="bold"
+                android:textColor="#0F172A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edtServiceType"
+                android:hint="e.g. Engine Oil Change"
+                android:background="@drawable/bg_input"
+                android:padding="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+
+            <!-- WORKSHOP -->
+            <TextView
+                android:text="Workshop Name"
+                android:textStyle="bold"
+                android:textColor="#0F172A"
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edtWorkshop"
+                android:hint="e.g. Ah Seng Motor"
+                android:background="@drawable/bg_input"
+                android:padding="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+
+            <!-- DATE PICKER -->
+            <TextView
+                android:text="Service Date"
+                android:textStyle="bold"
+                android:textColor="#0F172A"
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edtDate"
+                android:hint="Select date"
+                android:focusable="false"
+                android:clickable="true"
+                android:background="@drawable/bg_input"
+                android:padding="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+
+            <!-- NOTES -->
+            <TextView
+                android:text="Notes (Optional)"
+                android:textStyle="bold"
+                android:textColor="#0F172A"
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edtNotes"
+                android:hint="e.g. Changed oil + filter"
+                android:background="@drawable/bg_input"
+                android:padding="12dp"
+                android:minLines="2"
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- ACTION -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:text="Cancel"
+                    android:textColor="#2563EB"
+                    android:backgroundTint="#E0F2FE"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"/>
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:text="Save"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#22C55E"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

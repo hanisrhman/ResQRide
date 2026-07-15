@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F1F5F9"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ================= GOOGLE MAP ================= -->
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <!-- ================= TOP APP BAR ================= -->
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.Material3.ActionBar"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="Workshop Finder"
+        app:titleTextColor="#111827"
+        android:layout_gravity="top"/>
+
+
+    <!-- ================= SEARCH BAR ================= -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/bg_white_card"
+        app:boxBackgroundMode="none">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtSearch"
+            android:hint="Search workshop"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="8dp"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- ================= FILTER CHIPS ================= -->
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_gravity="top"
+        app:singleLine="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open Now"
+            android:checkable="true"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭐ 4.0+"
+            android:checkable="true"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipNear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nearest"
+            android:checkable="true"/>
+
+    </com.google.android.material.chip.ChipGroup>
+
+
+    <!-- ================= WORKSHOP LIST ================= -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerWorkshop"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="12dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:clipToPadding="false"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

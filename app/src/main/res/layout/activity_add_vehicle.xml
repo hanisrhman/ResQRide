@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F1F5F9"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- TOP BAR -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- BACK BUTTON -->
+            <ImageView
+                android:id="@+id/btnBack"
+                android:src="@drawable/ic_back"
+                android:padding="8dp"
+                android:layout_width="36dp"
+                android:layout_height="36dp"/>
+
+            <!-- TITLE -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginStart="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Add Vehicle"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#0F172A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Save your motorcycle details for future services"
+                    android:textSize="14sp"
+                    android:textColor="#64748B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- CARD -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:strokeColor="#E5E7EB"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Motorcycle Model -->
+                <TextView
+                    android:text="Motorcycle Model"
+                    android:textStyle="bold"
+                    android:textColor="#0F172A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/edtModel"
+                    android:hint="e.g. Yamaha LC135"
+                    android:background="@drawable/bg_input"
+                    android:padding="12dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"/>
+
+                <!-- Plate Number -->
+                <TextView
+                    android:text="Plate Number"
+                    android:layout_marginTop="14dp"
+                    android:textStyle="bold"
+                    android:textColor="#0F172A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/edtPlate"
+                    android:hint="e.g. VBL 2345"
+                    android:background="@drawable/bg_input"
+                    android:padding="12dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"/>
+
+                <!-- Manufacture Year -->
+                <TextView
+                    android:text="Manufacture Year (Optional)"
+                    android:layout_marginTop="14dp"
+                    android:textStyle="bold"
+                    android:textColor="#0F172A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/edtYear"
+                    android:hint="e.g. 2021"
+                    android:inputType="number"
+                    android:background="@drawable/bg_input"
+                    android:padding="12dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"/>
+
+                <!-- Notes -->
+                <TextView
+                    android:text="Last Service Notes (Optional)"
+                    android:layout_marginTop="14dp"
+                    android:textStyle="bold"
+                    android:textColor="#0F172A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/edtService"
+                    android:hint="e.g. Engine oil change"
+                    android:background="@drawable/bg_input"
+                    android:padding="12dp"
+                    android:layout_marginTop="6dp"
+                    android:minLines="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- SAVE BUTTON -->
+        <Button
+            android:id="@+id/btnSaveVehicle"
+            android:text="Save Vehicle"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:backgroundTint="#2563EB"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"/>
+
+    </LinearLayout>
+</ScrollView>

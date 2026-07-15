@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F6F7FB"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- CONTENT -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="History"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="View your SOS requests and breakdown records"
+            android:textColor="#6B7280"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- SEARCH -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:startIconDrawable="@drawable/ic_search"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtSearch"
+                android:hint="Search problem, workshop, vehicle..."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- TABS -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnActive"
+                android:text="Active"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:backgroundTint="#E5E7EB"
+                android:textColor="#111827"
+                android:layout_width="0dp"
+                android:layout_height="48dp"/>
+
+            <Button
+                android:id="@+id/btnPast"
+                android:text="Past"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#2563EB"
+                android:textColor="#FFFFFF"
+                android:layout_width="0dp"
+                android:layout_height="48dp"/>
+        </LinearLayout>
+
+        <!-- LIST -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerHistory"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <!-- BOTTOM NAV -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_alignParentBottom="true"
+        android:background="#E7F5F8"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:labelVisibilityMode="labeled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

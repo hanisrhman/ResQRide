@@ -1,0 +1,73 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TOP BAR -->
+    <LinearLayout
+        android:background="#2563EB"
+        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:src="@drawable/ic_back"
+            android:background="@android:color/transparent"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:text="SOS Chat"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- INPUT -->
+    <LinearLayout
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btnImage"
+            android:src="@drawable/ic_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <ImageButton
+            android:id="@+id/btnFile"
+            android:src="@drawable/ic_attach"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <EditText
+            android:id="@+id/edtMessage"
+            android:hint="Type message..."
+            android:background="@drawable/bg_input"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_width="0dp"
+            android:layout_height="40dp"/>
+
+
+        <ImageButton
+            android:id="@+id/btnSend"
+            android:src="@drawable/ic_send"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+</LinearLayout>

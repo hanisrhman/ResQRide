@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#D2DCFA">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- ICON -->
+        <ImageView
+            android:src="@drawable/ic_warning"
+            android:tint="#F47851"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <!-- INFO -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtProblem"
+                android:text="Tyre Puncture"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#111827"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txtWorkshop"
+                android:text="Workshop Name"
+                android:textColor="#6B7280"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txtVehicle"
+                android:text="Vehicle: Yamaha LC135"
+                android:textSize="12sp"
+                android:textColor="#6B7280"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txtTime"
+                android:text="28 Jan 2026 • 3:34 PM"
+                android:textSize="12sp"
+                android:textColor="#9CA3AF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- STATUS -->
+        <TextView
+            android:id="@+id/txtStatus"
+            android:text="Completed"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:background="@drawable/bg_status_completed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

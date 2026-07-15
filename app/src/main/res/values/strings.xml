@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ResQRide</string>
+
+    <!-- Google Sign-In Web Client ID -->
+    <string name="default_web_client_id">
+        1030160939794-sbjlgljn5922kmqmojcqhfftcl5fft3m.apps.googleusercontent.com
+    </string>
+</resources>

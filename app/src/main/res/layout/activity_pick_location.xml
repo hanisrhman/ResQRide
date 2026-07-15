@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- SEARCH BAR -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+
+        <EditText
+            android:id="@+id/edtSearch"
+            android:hint="Search location"
+            android:layout_weight="1"
+            android:background="@drawable/bg_input"
+            android:padding="12dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:text="Search"
+            android:textAllCaps="false"
+            android:layout_marginStart="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- MAP -->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"/>
+
+    <!-- CONFIRM -->
+    <Button
+        android:id="@+id/btnConfirm"
+        android:text="Confirm Location"
+        android:textAllCaps="false"
+        android:backgroundTint="#2563EB"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

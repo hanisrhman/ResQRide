@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9FAFB"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- TITLE -->
+        <TextView
+            android:text="Rate Your Experience"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginBottom="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="How was the workshop service?"
+            android:textSize="14sp"
+            android:textColor="#6B7280"
+            android:layout_marginBottom="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- CARD -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/bg_card_rounded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- RATING -->
+            <TextView
+                android:text="Your Rating"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:numStars="5"
+                android:stepSize="1.0"
+                android:isIndicator="false"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- REVIEW -->
+            <TextView
+                android:text="Your Review (optional)"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edtReview"
+                android:hint="Write your feedback here..."
+                android:minLines="3"
+                android:gravity="top"
+                android:background="@drawable/bg_input"
+                android:padding="14dp"
+                android:layout_marginBottom="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- SUBMIT -->
+            <Button
+                android:id="@+id/btnSubmit"
+                android:text="Submit Rating"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#2563EB"
+                android:layout_width="match_parent"
+                android:layout_height="52dp" />
+
+            <Button
+                android:id="@+id/btnSkip"
+                android:text="Skip"
+                android:textAllCaps="false"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:backgroundTint="#8BC34A"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

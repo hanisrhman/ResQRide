@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:gravity="start"
+    android:padding="6dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- AVATAR -->
+    <ImageView
+        android:id="@+id/imgAvatar"
+        android:src="@drawable/ic_user"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/bg_circle_gray"
+        android:padding="2dp"/>
+
+    <!-- MESSAGE BUBBLE -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/bg_chat_other"
+        android:padding="10dp"
+        android:maxWidth="280dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- TEXT -->
+        <TextView
+            android:id="@+id/txtMessage"
+            android:textColor="#111827"
+            android:textSize="15sp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- IMAGE -->
+        <ImageView
+            android:id="@+id/imgMessage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="4dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:background="@drawable/bg_image_round"/>
+
+        <!-- FILE -->
+        <Button
+            android:id="@+id/btnFile"
+            android:text="Open File"
+            android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2563EB"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

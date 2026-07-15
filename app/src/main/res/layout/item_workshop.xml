@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="14dp"
+    android:background="@drawable/bg_white_card"
+    android:layout_marginBottom="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtName"
+        android:text="Speed Motor Workshop"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txtDistance"
+        android:text="0.8 km away"
+        android:textSize="13sp"
+        android:textColor="#666666"
+        android:layout_marginTop="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txtRating"
+        android:text="⭐ 4.8"
+        android:textSize="13sp"
+        android:layout_marginTop="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnRequest"
+        android:text="Request Help"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#1E88E5"
+        android:textColor="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+</LinearLayout>

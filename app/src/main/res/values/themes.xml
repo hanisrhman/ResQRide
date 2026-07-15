@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- MAIN APP THEME -->
+    <style name="Theme.ResQRide"
+        parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="android:windowAnimationStyle">
+            @style/AppAnimation
+        </item>
+
+        <!-- PRIMARY (BLUE) -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+
+        <!-- SECONDARY (RED) -->
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+
+        <!-- REMOVE PURPLE -->
+        <item name="colorTertiary">@color/primaryColor</item>
+
+    </style>
+
+    <!-- ACTIVITY TRANSITION ANIMATION -->
+    <style name="AppAnimation">
+        <item name="android:activityOpenEnterAnimation">
+            @anim/fade_in
+        </item>
+        <item name="android:activityOpenExitAnimation">
+            @anim/fade_out
+        </item>
+        <item name="android:activityCloseEnterAnimation">
+            @anim/fade_in
+        </item>
+        <item name="android:activityCloseExitAnimation">
+            @anim/fade_out
+        </item>
+    </style>
+
+</resources>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:background="#F8FAFC">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- ================= TOP BAR ================= -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:src="@drawable/ic_back"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back"
+                android:padding="8dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:text="🚨 Emergency SOS"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#DC2626"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- ================= FORM CARD ================= -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="14dp"
+            android:background="@drawable/bg_card_rounded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- NAME -->
+            <EditText
+                android:id="@+id/edtName"
+                android:hint="Your Name"
+                android:background="@drawable/bg_input"
+                android:padding="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- PROBLEM -->
+            <EditText
+                android:id="@+id/edtProblem"
+                android:hint="Describe the problem"
+                android:minLines="3"
+                android:gravity="top"
+                android:background="@drawable/bg_input"
+                android:padding="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- VEHICLE SPINNER -->
+            <Spinner
+                android:id="@+id/spinnerVehicle"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_input"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+
+            <!-- MANUAL VEHICLE -->
+            <EditText
+                android:id="@+id/edtVehicleModel"
+                android:hint="Motorcycle Model (e.g. Yamaha LC135)"
+                android:background="@drawable/bg_input"
+                android:padding="14dp"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edtPlate"
+                android:hint="Plate Number (e.g. VBL 2345)"
+                android:background="@drawable/bg_input"
+                android:padding="14dp"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- MEDIA -->
+            <TextView
+                android:text="Attach photo (optional)"
+                android:textStyle="bold"
+                android:layout_marginTop="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnTakePhoto"
+                android:text="📷 Take Photo"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#2563EB"
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+
+            <TextView
+                android:id="@+id/txtMediaStatus"
+                android:text="No media attached"
+                android:textSize="12sp"
+                android:textColor="#64748B"
+                android:layout_marginTop="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!-- ================= ACTION BUTTONS ================= -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:text="Cancel"
+                    android:textAllCaps="false"
+                    android:textColor="#2563EB"
+                    android:backgroundTint="#E0F2FE"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"/>
+
+                <Button
+                    android:id="@+id/btnSubmitSOS"
+                    android:text="Send SOS"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#DC2626"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

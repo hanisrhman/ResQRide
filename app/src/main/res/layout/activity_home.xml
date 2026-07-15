@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F9FAFB"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ================= CONTENT ================= -->
+    <ScrollView
+        android:layout_above="@id/bottomNavigation"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- ================= HEADER ================= -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:background="@drawable/bg_home_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/logo2"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"/>
+
+                    <TextView
+                        android:text="ResQRide"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/txtLocation"
+                        android:text="Detecting location..."
+                        android:textSize="13sp"
+                        android:textColor="#E0F2FE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <!-- WELCOME -->
+                <TextView
+                    android:id="@+id/txtWelcome"
+                    android:text="Welcome 👋"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txtWelcomeSub"
+                    android:text="Drive safe, help is always nearby"
+                    android:textSize="13sp"
+                    android:textColor="#E0F2FE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- ================= SOS CARD ================= -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_margin="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="#FEE2E2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Emergency Breakdown?"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#7F1D1D"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:text="Send SOS and get help immediately"
+                        android:textSize="13sp"
+                        android:textColor="#991B1B"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"/>
+
+                    <Button
+                        android:id="@+id/btnSOS"
+                        android:text="SEND SOS"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:backgroundTint="#DC2626"
+                        android:layout_marginTop="14dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ================= QUICK ACTIONS ================= -->
+            <TextView
+                android:text="Quick Actions"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#111827"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_weight="1"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btnWorkshop"
+                        android:text="Find Workshop"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#2563EB"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"/>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btnGarage"
+                        android:text="Garage"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#0EA5E9"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"/>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- ================= GUEST NOTICE ================= -->
+            <LinearLayout
+                android:id="@+id/layoutNotice"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_notice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Sign up to manage your garage and service history."
+                    android:textColor="#92400E"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/btnSignUp"
+                    android:text="Sign Up"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#F59E0B"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- 📜 RECENT SERVICES -->
+            <TextView
+                android:text="Recent Services"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#111827"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txtNoService"
+                android:text="No recent services yet"
+                android:textColor="#6B7280"
+                android:layout_margin="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerRecent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ================= BOTTOM NAV ================= -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_alignParentBottom="true"
+        android:background="#E7F5F8"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:labelVisibilityMode="labeled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

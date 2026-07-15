@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- IMAGE SLIDER -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- DARK GRADIENT (OPTIONAL, REMOVE IF YOU WANT FULL IMAGE) -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_onboard_gradient"/>
+
+    <!-- CONTENT OVERLAY -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- TITLE -->
+        <TextView
+            android:id="@+id/txtTitle"
+            android:text="Fast &amp; Safe Help"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- DESCRIPTION -->
+        <TextView
+            android:id="@+id/txtDesc"
+            android:text="Get assistance quickly and safely"
+            android:textSize="14sp"
+            android:textColor="#E5E7EB"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- BUTTON -->
+        <Button
+            android:id="@+id/btnNext"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#2563EB"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"/>
+
+        <!-- SPACE FROM BOTTOM -->
+        <View
+            android:layout_height="24dp"
+            android:layout_width="match_parent"/>
+    </LinearLayout>
+
+</FrameLayout>

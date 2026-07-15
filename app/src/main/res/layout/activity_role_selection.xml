@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- FULL BACKGROUND IMAGE -->
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bike_header"
+        android:contentDescription="Background"/>
+
+    <!-- OVERLAY CONTENT -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:background="#B3FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- LOGO (TOP) -->
+        <ImageView
+            android:id="@+id/imgLogo2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/logo2"
+            android:contentDescription="ResQRide Logo"/>
+
+
+        <!-- SUBTITLE -->
+        <TextView
+            android:text="Select your role"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#0E0F10"
+            android:layout_marginBottom="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- RIDER BUTTON -->
+        <Button
+            android:id="@+id/btnRider"
+            android:text="Rider"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1E88E5"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <!-- WORKSHOP BUTTON -->
+        <Button
+            android:id="@+id/btnWorkshop"
+            android:layout_width="match_parent"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1E88E5"
+            android:layout_height="50dp"
+            android:text="Workshop"
+            android:layout_marginTop="16dp"/>
+
+
+        <!-- SIGN UP -->
+        <TextView
+            android:id="@+id/txtSignup"
+            android:text="-"
+            android:textColor="#0066CC"
+            android:layout_marginTop="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</FrameLayout>

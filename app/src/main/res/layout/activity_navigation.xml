@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A">
+
+    <!-- ========================= -->
+    <!-- GOOGLE MAP FULL SCREEN -->
+    <!-- ========================= -->
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- ========================= -->
+    <!-- TOGGLE CARD BUTTON -->
+    <!-- ========================= -->
+
+    <ImageView
+        android:id="@+id/btnToggleCard"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:background="@drawable/bg_card_rounded"
+        android:src="@drawable/ic_arrow_down"
+        android:elevation="20dp"
+        android:contentDescription="Toggle Info Card"/>
+
+    <!-- ========================= -->
+    <!-- INFO CARD -->
+    <!-- ========================= -->
+
+    <LinearLayout
+        android:id="@+id/infoCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/bg_card_rounded"
+        android:elevation="15dp">
+
+        <!-- Rider Name -->
+        <TextView
+            android:id="@+id/txtRiderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rider Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#111827"/>
+
+        <!-- Problem -->
+        <TextView
+            android:id="@+id/txtProblem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Problem"
+            android:textSize="14sp"
+            android:textColor="#6B7280"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Plate -->
+        <TextView
+            android:id="@+id/txtPlate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plate: -"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#374151"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Address -->
+        <TextView
+            android:id="@+id/txtAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📍 Loading address..."
+            android:textSize="13sp"
+            android:textColor="#4B5563"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Distance -->
+        <TextView
+            android:id="@+id/txtDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00 km away"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#2563EB"
+            android:layout_marginTop="6dp"/>
+
+        <!-- Problem Image -->
+        <ImageView
+            android:id="@+id/imgProblem"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:background="#E5E7EB"
+            android:visibility="gone"/>
+
+        <!-- ========================= -->
+        <!-- BUTTON SECTION -->
+        <!-- ========================= -->
+
+        <Button
+            android:id="@+id/btnNavigate"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Start Navigation"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2563EB"
+            android:layout_marginTop="14dp"/>
+
+        <Button
+            android:id="@+id/btnArrived"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Arrived"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#F59E0B"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnChat"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="💬 Chat Rider"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#6366F1"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnComplete"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Complete Job"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#22C55E"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
